@@ -52,6 +52,10 @@ def starts_with_consonant?(string)
 end
 
 def binary_multiple_of_4?(string)
+  return false if string.empty? || string.match?(/[^01]/)
+  return string[-2..-1] == "00" if string.size > 1
+  return true if string.size == 1 && string[-1] == "0"
+  return false
   # YOUR CODE HERE
 end
 
