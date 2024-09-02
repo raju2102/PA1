@@ -47,6 +47,8 @@ end
 
 def starts_with_consonant?(string)
   # YOUR CODE HERE
+  return false if string.size == 0
+  return string[0].downcase.match?(/[a-z]/) && !string[0].downcase.match?(/[aeiou]/)
 end
 
 def binary_multiple_of_4?(string)
