@@ -30,6 +30,13 @@ end
 
 def sum_to_n?(arr, number)
   # YOUR CODE HERE
+  return false if arr.size == 1
+  map = {}
+  arr.each do |a|
+    return true if map[number-a]
+    map[a] = true
+  end
+  return false
 end
 
 # Part 2
