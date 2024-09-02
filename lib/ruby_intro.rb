@@ -64,4 +64,26 @@ end
 # Object representing a book
 class BookInStock
   # YOUR CODE HERE
+  def initialize(isbn, price)
+    raise ArgumentError, "isbn cannot be empty" if isbn == ""
+    @isbn = isbn
+    raise ArgumentError, "price cannot be 0" if price <= 0
+    @price = price
+  end
+  def isbn
+    return @isbn
+  end
+  def price
+    return @price
+  end
+  def isbn=(isbn)
+    @isbn = isbn
+  end
+  def price=(price)
+    @price = price
+  end
+  def price_as_string
+    return "$#{format('%.2f', @price)}"
+  end
+
 end
